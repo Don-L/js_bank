@@ -38,8 +38,11 @@ Bank.prototype = {
         sortedAccounts.push(account);
       }
     }
-   var result = _.orderBy(sortedAccounts, 'value', "desc")[0];
-    return result;
+    var total = 0;
+   for (var account of sortedAccounts) {
+    total += account.value;
+   }
+    return total;
   }
 }
 

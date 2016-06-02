@@ -38,8 +38,8 @@ describe('bank', function() {
   it('should be able to find the total value for a given account type', function() {
     result1 = bank.largestByType('personal');
     result2 = bank.largestByType('business');
-    assert.equal(account1, result1);
-    assert.equal(account2, result2);
+    assert.equal(1000, result1);
+    assert.equal(999, result2);
   })
 
   
